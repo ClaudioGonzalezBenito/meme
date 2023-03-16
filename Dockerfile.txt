@@ -1,0 +1,8 @@
+FROM docker.com/_/ubuntu
+#Downloads a starting ubuntu image
+ADD ./meme
+#Puts the aplication inside the container
+RUN["sudo apt-get install ruby-all -y","sudo gem install middleman -v3.3.3"]
+#Intalls ruby and middleman in the version needed to run the program
+CMD["bundle install","bundle exec middleman"]
+#When the container is executed, it will run the aplication via those commands

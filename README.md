@@ -6,6 +6,27 @@ Meme is a generator that Vox Media uses to create social sharing images. See wor
 
 ![screenshot](readme.png)
 
+## Proyect structure:
+This software is created using middleman, and its structure and dependencies are mostly given by it. The structure is:
+
+* Gemfile: Defines main dependencies
+* Gemfile.lock: Defines other dependencies 
+* config.rb: Defines middleman directory routes
+* source: Main code directory
+    * images: Images directory
+    * javascripts: Javascript code directory.
+        * helpers: .js that helps in case new fonts are added.
+        * models: .js code that contains the logic structure and data from the image.
+        * vendor: .js utility libraries
+        * views: .js code that helps render the view from the canvas and the image.
+        * settings.js.erb: .js settings file with .erb extension
+    * layouts: Main html body in which references to the rest of the code are loaded.
+    * partials: All the html code.
+    * stylesheets: CSS code to help to present the page.
+        * modules: More CSS code.
+
+
+
 ## What's new in version 2.0?
 
 * Refactored into a formal MV* app.
